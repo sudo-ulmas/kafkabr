@@ -45,7 +45,7 @@ class Consumer {
   ///
   /// See [OffsetOutOfRangeBehavior] for details on each value.
   OffsetOutOfRangeBehavior onOffsetOutOfRange =
-      OffsetOutOfRangeBehavior.resetToLatest;
+      OffsetOutOfRangeBehavior.resetToEarliest;
 
   /// Creates new consumer identified by [consumerGroup].
   Consumer(this.session, this.consumerGroup, this.topicPartitions,
@@ -205,7 +205,7 @@ class _ConsumerWorker {
   final int minBytes;
 
   OffsetOutOfRangeBehavior onOffsetOutOfRange =
-      OffsetOutOfRangeBehavior.resetToLatest;
+      OffsetOutOfRangeBehavior.resetToEarliest;
 
   _ConsumerWorker(this.session, this.host, this.topicPartitions,
       this.maxWaitTime, this.minBytes,
