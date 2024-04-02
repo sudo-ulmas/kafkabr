@@ -46,8 +46,7 @@ class ConsumerGroup {
       } else if (error.isError) {
         kafkaLogger.info(
             'ConsumerGroup(${name}): fetchOffsets failed. Error code: ${offset.errorCode} for partition ${offset.partitionId} of ${offset.topicName}.');
-	    print('hellllo');
-        // throw error;
+        throw error;
       }
     }
 
@@ -80,7 +79,8 @@ class ConsumerGroup {
       } else if (error.isError) {
         kafkaLogger.info(
             'ConsumerGroup(${name}): commitOffsets failed. Error code: ${offset.errorCode} for partition ${offset.partitionId} of ${offset.topicName}.');
-        throw error;
+        // throw error;
+	print('heeeeeeeeloo');
       }
     }
 
