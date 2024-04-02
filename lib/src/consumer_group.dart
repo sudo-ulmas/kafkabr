@@ -80,7 +80,8 @@ class ConsumerGroup {
         kafkaLogger.info(
             'ConsumerGroup(${name}): commitOffsets failed. Error code: ${offset.errorCode} for partition ${offset.partitionId} of ${offset.topicName}.');
         // throw error;
-	print('heeeeeeeeloo');
+	print('bb');
+        return null;
       }
     }
 
